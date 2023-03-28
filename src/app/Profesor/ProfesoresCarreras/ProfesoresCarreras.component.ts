@@ -17,10 +17,10 @@ export class ProfesoresCarrerasComponent implements OnInit {
    }
 
   ngOnInit() {
-    let filtro = this.activatedRoute.snapshot.params['carreraID'];
+    let filtro = this.activatedRoute.snapshot.params['titulacion'];
 
     this.profesorService.getProfesores().subscribe(datosProfesores => {
-      this.profesores = datosProfesores.filter(profesor => profesor.carreraID == filtro);
+      this.profesores = datosProfesores.filter(profesor => profesor.titulacion == filtro);
     });
   }
 

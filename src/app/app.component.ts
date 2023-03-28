@@ -1,37 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   template: `
-    <!-- <div>
-      <button class="color" [class]="aplicarClases">Boton 1</button>
-      <br><br><br>
-      <button class="color italica negrita" [class.negrita]='false'>Boton 2</button>
-      <br><br><br>
-      <button [ngClass]='addClases()'>Boton 3</button>
-      <br><br><br>
-      <button (click)='onclick()'>Boton 4</button>
-      <br><br><br>
-      <img src="./assets/mex.png" alt="" height="100vh" *ngIf="visible">
-    </div> -->
-    <!-- <app-Alumno> -->
-      <div class="p-5">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a routerLink="alumno" class="nav-link">Alumnos</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="profesor" class="nav-link">Profesores</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="carrera" class="nav-link">Carreras</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="curso" class="nav-link">Cursos</a>
-          </li>
-        </ul>
-        <router-outlet></router-outlet>
-      </div>
+<div class="p-5">
+    <nav class="navbar navbar-expand-lg fixed-top row">
+        <a routerLink="alumno" class="nav-link" exact>Alumnos</a>
+        <a routerLink="profesor" class="nav-link" exact>Profesores</a>
+        <a routerLink="carrera" class="nav-link" exact>Carreras</a>
+        <a routerLink="curso" class="nav-link" exact>Cursos</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
   `,
 
 
@@ -64,12 +45,12 @@ export class AppComponent {
 
   encabezado: string = "";
   nombre: string = 'Perico';
-  apellido: string = 'Palotes';
+  apellidos: string = 'Palotes';
   imagen: string = 'https://www.lectiva.com/assets/es/logos/centro/id/73750/size/m.jpg';
   desactivado: boolean = false;
 
   getNombreCompleto(): string {
-    return this.nombre + ' ' + this.apellido;
+    return this.nombre + ' ' + this.apellidos;
   }
 }
 

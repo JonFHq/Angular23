@@ -1,4 +1,4 @@
 <select [(ngModel)]="eleccion" (change)="alCambiar()">
-  <option value="0">Elige un curso</option>
-  <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.curso}}</option>
+  <option value="0">Elige un Curso</option>
+  <option *ngFor="let curso of cursos" [value]="curso.ID">{{curso.nomCurso}}</option>
 </select>

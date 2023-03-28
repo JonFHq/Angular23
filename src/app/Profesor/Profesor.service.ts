@@ -12,7 +12,7 @@ export class ProfesorService {
 constructor(public _http: HttpClient) { }
 
   getProfesores(): Observable<Profesor[]> {
-    return this._http.get<Profesor[]>('https://localhost:44393/api/Profesor');
+    return this._http.get<Profesor[]>('https://localhost:44322/api/Profesor');
   }
 
 }

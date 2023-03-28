@@ -7,7 +7,7 @@ import { AlumnoServiceService } from '../AlumnoService.service';
   templateUrl: './alumno-lista.component.html',
   styleUrls: ['./alumno-lista.component.css']
 })
-export class AlumnoListaComponent implements OnInit{
+export class AlumnoListaComponent implements OnInit {
 
   seleccion: string = 'total';
 
@@ -19,7 +19,7 @@ export class AlumnoListaComponent implements OnInit{
 
   ngOnInit() {
     this.service.getAlumnos().subscribe((datosAlumnos) => this.alumnos = datosAlumnos);
-   }
+  }
 
   //create a function that retourns the number of elements in the array
   totalAlumnos(): number {
@@ -36,7 +36,14 @@ export class AlumnoListaComponent implements OnInit{
 
   alPulsar(opcionElegida: string): void {
     this.seleccion = opcionElegida;
+    console.log("Opcion elegida: " + opcionElegida);
+    let alumnosLog: any;
+    if (opcionElegida === 'total') {
+      alumnosLog = this.alumnos.map(alumno => alumno.nombre + " " + alumno.apellidos);
+    } else {
+      alumnosLog = this.alumnos.filter(alumno => alumno.sexo === opcionElegida).map(alumno => alumno.ID + ": " + alumno.nombre + " " + alumno.apellidos);
+    }
+    console.log(alumnosLog);
   }
-
 
 }

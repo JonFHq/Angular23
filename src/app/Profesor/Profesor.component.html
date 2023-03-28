@@ -1,24 +1,28 @@
 <br><br>
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Fecha de Ingreso</th>
-      <th>Titulacion</th>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha de Ingreso</th>
+      <th scope="col">Titulacion</th>
     </tr>
+  </thead>
+  <tbody>
     <ng-container *ngFor='let profesor of profesores'>
       <tr>
+        <th scope="row">{{profesor.ID}}</th>
         <td>{{profesor.nombre}}</td>
-        <td>{{profesor.apellido}}</td>
-        <td>{{profesor.fingreso}}</td>
+        <td>{{profesor.apellidos}}</td>
+        <td>{{profesor.fIngreso}}</td>
           <ng-container *ngFor='let carrera of carreras'>
-            <td *ngIf="profesor.carreraID==carrera.id">{{carrera.titulo}}</td>
+            <td *ngIf="profesor.titulacion==carrera.ID">{{carrera.titulo}}</td>
           </ng-container>
       </tr>
     </ng-container>
     <tr *ngIf='profesores.length == 0'>
       <td colspan="4">No hay profesores</td>
     </tr>
-  </thead>
+  </tbody>
 </table>

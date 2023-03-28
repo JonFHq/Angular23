@@ -20,11 +20,10 @@ import { ElegirCursoComponent } from './Curso/ElegirCurso/ElegirCurso.component'
 const appRutas: Routes = [
   { path: 'alumno', component: AlumnoListaComponent },
   { path: 'profesor', component: ProfesorComponent },
-  { path: 'profesor/:carreraID', component: ProfesoresCarrerasComponent },
+  { path: 'profesor/:titulacion', component: ProfesoresCarrerasComponent },
   { path: 'alumno/:id', component: AlumnoComponent},
-  { path: '', redirectTo: '/alumno', pathMatch: 'full' },
   { path: 'carrera', component: CarreraComponent },
-  { path: 'curso', component: CursoComponent },
+  { path: 'Curso', component: CursoComponent },
 ];
 
 @NgModule({

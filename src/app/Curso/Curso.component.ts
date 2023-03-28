@@ -11,7 +11,7 @@ import { Alumno } from '../Alumno/IAlumno';
 export class CursoComponent implements OnInit {
 
   cursoSeleccionado: number;
-  alumnos : Alumno[];
+  alumnos: Alumno[];
 
   constructor(private alumnosService: AlumnoServiceService, private activatedRoute: ActivatedRoute) {
     this.cursoSeleccionado = 0;
@@ -20,15 +20,14 @@ export class CursoComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   ElegirCurso(cursoSeleccionado: number): void {
 
     this.alumnosService.getAlumnos().subscribe(datosAlumnos => {
-       this.alumnos =  datosAlumnos.filter(alumno => alumno.cursoID == cursoSeleccionado);
+      this.alumnos = datosAlumnos.filter(alumno => alumno.cursoID == cursoSeleccionado);
     });
+    console.log("Curso seleccionado: " + cursoSeleccionado);
     console.log(this.alumnos);
-
   }
 }

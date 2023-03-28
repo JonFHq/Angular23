@@ -11,7 +11,7 @@ export class CarreraService {
   constructor(public _http: HttpClient) { }
 
   getCarreras(): Observable<Carrera[]> {
-    return this._http.get<Carrera[]>('https://localhost:44393/api/Carrera');
+    return this._http.get<Carrera[]>('https://localhost:44322/api/Carrera');
   }
 
 

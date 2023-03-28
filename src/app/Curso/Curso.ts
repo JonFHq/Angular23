@@ -1,11 +1,11 @@
 export interface Curso {
-  id: number;
-  curso: string;
+  ID: number;
+  nomCurso: string;
 
 }
 export class Curso {
   constructor(
-    public id: number,
-    public curso: string
+    public ID: number,
+    public nomCurso: string
   ) {}
 }

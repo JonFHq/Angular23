@@ -11,11 +11,11 @@ export class AlumnoServiceService {
   constructor(public _http: HttpClient) { }
 
   getAlumnos(): Observable<Alumno[]> {
-    return this._http.get<Alumno[]>('https://localhost:44393/api/Alumno');
+    return this._http.get<Alumno[]>('https://localhost:44322/api/Alumno');
   }
 
-  getAlumno(id:number): Observable<Alumno> {
-    return this._http.get<Alumno>('https://localhost:44393/api/Alumno/'+id);
+  getAlumno(id: number): Observable<Alumno> {
+    return this._http.get<Alumno>('https://localhost:44322/api/Alumno/' + id);
   }
 }
 

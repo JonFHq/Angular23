@@ -1,18 +1,20 @@
 export interface IProfesor {
+  ID: number;
   nombre: string;
-  apellido: string;
-  fingreso: string;
-  carreraID: number;
+  apellidos: string;
+  fIngreso: string;
+  titulacion: number;
 
 }
 
 export class Profesor implements IProfesor {
 
   constructor(
+    public ID: number,
     public nombre: string,
-    public apellido: string,
-    public fingreso: string,
-    public carreraID: number
+    public apellidos: string,
+    public fIngreso: string,
+    public titulacion: number
   ) {}
 
 }

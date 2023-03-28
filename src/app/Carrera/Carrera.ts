@@ -1,11 +1,11 @@
 export interface ICarrera {
-  id: number;
+  ID: number;
   titulo: string;
 
 }
 export class Carrera {
   constructor(
-    public id: number,
+    public ID: number,
     public titulo: string
   ) {}
 }

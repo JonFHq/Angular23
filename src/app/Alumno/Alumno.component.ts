@@ -13,14 +13,15 @@ export class AlumnoComponent implements OnInit {
 
   alumno: Alumno;
 
-  constructor(private alumnoService: AlumnoServiceService, private activatedRoute : ActivatedRoute) {
-    this.alumno = new Alumno(1,"","","","","",0)
+  constructor(private alumnoService: AlumnoServiceService, private activatedRoute: ActivatedRoute) {
+    this.alumno = new Alumno(1, "", "", "", "", "", 0)
   }
-  visibles : boolean = true;
+  visibles: boolean = true;
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.params['id'];
-    this.alumnoService.getAlumno(id).subscribe((datosAlumno)=> this.alumno = datosAlumno) //Aqui cargamos ya el alumno con los datos
+    console.log("ID: " + id);
+    this.alumnoService.getAlumno(id).subscribe((datosAlumno) => this.alumno = datosAlumno) //Aqui cargamos ya el alumno con los datos
   }
 
 
