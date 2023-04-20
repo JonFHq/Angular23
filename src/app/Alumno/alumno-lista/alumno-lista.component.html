@@ -14,7 +14,7 @@
   <tbody>
     <ng-container *ngFor='let alumno of alumnos'>
       <tr *ngIf='seleccion==="total" || alumno.sexo==seleccion'>
-        <td>{{alumno.ID}}</td>
+        <th scope="row">{{alumno.ID}}</th>
         <td><a [routerLink]="['/alumno', alumno.ID]">{{alumno.nombre | uppercase | alumnoTitulo : alumno.sexo}}</a></td>
         <td>{{alumno.apellidos}}</td>
         <td>{{alumno.direccion}}</td>

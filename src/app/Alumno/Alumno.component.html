@@ -1,18 +1,24 @@
-
-<tr>
-  <th></th>
-  <th>Nombre</th>
-  <th>Apellidos</th>
-  <th>Direccion</th>
-  <th>Fecha de Nacimiento</th>
-  <th>Sexo</th>
-</tr>
-<ng-container>
-  <tr>
-    <td>{{alumno.ID}}</td>
-    <td>{{alumno.nombre}}</td>
-    <td>{{alumno.apellidos}}</td>
-    <td>{{alumno.direccion}}</td>
-    <td>{{alumno.fnac | date: 'dd/MM/yyyy'}}</td>
-    <td>{{alumno.sexo}}</td>
-  </tr>
+<table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Sexo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container>
+      <tr>
+        <th scope="row">{{alumno.ID}}</th>
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.apellidos}}</td>
+        <td>{{alumno.direccion}}</td>
+        <td>{{alumno.fnac}}</td>
+        <td>{{alumno.sexo}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

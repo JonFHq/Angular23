@@ -1,15 +1,19 @@
 <br><br>
-<table>
+<table  class="table table-primary">
   <thead>
     <tr>
-      <th>Titulaciones</th>
+      <th scope="col">#</th>
+      <th scope="col">Titulaciones</th>
     </tr>
+  </thead>
+  <tbody>
     <ng-container *ngFor='let carrera of carreras'>
       <tr>
+        <th scope="row">{{carrera.ID}}</th>
         <td>
           <a [routerLink]="['/profesor', carrera.ID]">{{carrera.titulo}}</a>
         </td>
       </tr>
     </ng-container>
-  </thead>
+  </tbody>
 </table>

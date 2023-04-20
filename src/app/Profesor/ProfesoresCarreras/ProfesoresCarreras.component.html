@@ -1,17 +1,21 @@
 <br><br>
-<table>
+<table  class="table table-primary">
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-      <th>Fecha de Ingreso</th>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha de Ingreso</th>
     </tr>
+  </thead>
+  <tbody>
     <ng-container *ngFor='let profesor of profesores'>
       <tr>
+        <th scope="row">{{profesor.ID}}</th>
         <td>{{profesor.nombre}}</td>
         <td>{{profesor.apellidos}}</td>
         <td>{{profesor.fIngreso}}</td>
       </tr>
     </ng-container>
-  </thead>
+  </tbody>
 </table>

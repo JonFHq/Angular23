@@ -4,7 +4,7 @@ export interface IProfesor {
   apellidos: string;
   fIngreso: string;
   titulacion: number;
-
+  departamentoID: number;
 }
 
 export class Profesor implements IProfesor {
@@ -14,7 +14,8 @@ export class Profesor implements IProfesor {
     public nombre: string,
     public apellidos: string,
     public fIngreso: string,
-    public titulacion: number
+    public titulacion: number,
+    public departamentoID: number
   ) {}
 
 }

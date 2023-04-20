@@ -16,6 +16,8 @@ import { CarreraComponent } from './Carrera/Carrera.component';
 import { ProfesoresCarrerasComponent } from './Profesor/ProfesoresCarreras/ProfesoresCarreras.component';
 import { CursoComponent } from './Curso/Curso.component';
 import { ElegirCursoComponent } from './Curso/ElegirCurso/ElegirCurso.component';
+import { DepartamentoComponent } from './Departamento/Departamento.component';
+import { ElegirDepartamentoComponent } from './Departamento/ElegirDepartamento/ElegirDepartamento.component';
 
 const appRutas: Routes = [
   { path: 'alumno', component: AlumnoListaComponent },
@@ -23,7 +25,8 @@ const appRutas: Routes = [
   { path: 'profesor/:titulacion', component: ProfesoresCarrerasComponent },
   { path: 'alumno/:id', component: AlumnoComponent},
   { path: 'carrera', component: CarreraComponent },
-  { path: 'Curso', component: CursoComponent },
+  { path: 'departamento', component: DepartamentoComponent },
+  { path: 'curso', component: CursoComponent },
 ];
 
 @NgModule({
@@ -35,9 +38,11 @@ const appRutas: Routes = [
     AlumnoCountComponent,
     ProfesorComponent,
     CarreraComponent,
+    DepartamentoComponent, 
     ProfesoresCarrerasComponent,
     CursoComponent,
-    ElegirCursoComponent
+    ElegirCursoComponent,
+    ElegirDepartamentoComponent
    ],
   imports: [
     BrowserModule,

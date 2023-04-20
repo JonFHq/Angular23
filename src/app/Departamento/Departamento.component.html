@@ -1,4 +1,4 @@
-<br><br>
+<app-ElegirDepartamento (departamentoElegido)="ElegirDepartamento($event)"></app-ElegirDepartamento>
 <table  class="table table-primary">
   <thead>
     <tr>
@@ -6,8 +6,6 @@
       <th scope="col">Nombre</th>
       <th scope="col">Apellidos</th>
       <th scope="col">Fecha de Ingreso</th>
-      <th scope="col">Titulacion</th>
-      <th scope="col">Departamento</th>
     </tr>
   </thead>
   <tbody>
@@ -17,16 +15,10 @@
         <td>{{profesor.nombre}}</td>
         <td>{{profesor.apellidos}}</td>
         <td>{{profesor.fIngreso}}</td>
-          <ng-container *ngFor='let carrera of carreras'>
-            <td *ngIf="profesor.titulacion==carrera.ID">{{carrera.titulo}}</td>
-          </ng-container>
-          <ng-container *ngFor='let departamento of departamentos'>
-            <td *ngIf="profesor.departamentoID==departamento.ID">{{departamento.nomDepartamento}}</td>
-          </ng-container>
       </tr>
     </ng-container>
     <tr *ngIf='profesores.length == 0'>
-      <td colspan="4">No hay profesores</td>
+      <td colspan="3">No hay profesores</td>
     </tr>
   </tbody>
 </table>

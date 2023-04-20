@@ -1,29 +1,10 @@
-<h1>Vuestro nombre</h1>
-
-<div class="p-5">
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a routerLink="alumno" class="nav-link">Alumnos</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="profesor" class="nav-link">Profesores</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="carrera" class="nav-link">Carreras</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="Curso" class="nav-link">Cursos</a>
-        </li>
-    </ul>
-    <router-outlet></router-outlet>
-</div>
-
 <div class="p-5">
     <nav class="navbar navbar-expand-lg fixed-top row">
-        <routed-link to="alumno" class="nav-link" exact>Alumnos</routed-link>
-        <routed-link to="profesor" class="nav-link" exact>Profesores</routed-link>
-        <routed-link to="carrera" class="nav-link" exact>Carreras</routed-link>
-        <routed-link to="curso" class="nav-link" exact>Cursos</routed-link>
+        <a routerLink="alumno" class="nav-link" exact>Alumnos</a>
+        <a routerLink="profesor" class="nav-link" exact>Profesores</a>
+        <a routerLink="carrera" class="nav-link" exact>Carreras</a>
+        <a routerLink="departamento" class="nav-link" exact>Departamento</a>
+        <a routerLink="curso" class="nav-link" exact>Cursos</a>
     </nav>
     <router-outlet></router-outlet>
 </div>
